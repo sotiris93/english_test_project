@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/levels.css}">
+    <title>About</title>
+</head>
+<body>
+
+<!-- Importing NavBar -->
+<div th:insert="navbar.html :: navbar"></div>
+
+<!-- Main Container Start -->
+<div class="main-container container py-5 px-4">
+
+    <div>
+        <h1 class="mb-5 text-center">English Levels</h1>
+
+        <table>
+            <tr>
+                <th>A1 English (Beginner/Elementary)</th>
+                <td>Level A0/A1 corresponds to basic users of English who can understand
+                    and use familiar everyday expressions and very basic phrases.</td>
+            </tr>
+
+            <tr>
+                <th>A2 English (Pre Intermediate)</th>
+                <td>
+                    Level A2 corresponds to those users who can understand basic expressions and communicate in a simple manner.</td>
+            </tr>
+
+            <tr>
+                <th>B1 English (Intermediate)</th>
+                <td>
+                    Level B1 corresponds to users who can understand and produce text on
+                    familiar topics and give opinions and descriptions.</td>
+            </tr>
+
+            <tr>
+                <th>B2 English (Upper Intermediate)</th>
+                <td>
+                    Level B2 corresponds to users who can produce clear, detailed text
+                    and interact with a degree of fluency and spontaneity.</td>
+            </tr>
+
+            <tr>
+                <th>C1 English (Advanced)</th>
+                <td>
+                    Level C1 corresponds to users who can express themselves fluently and spontaneously. They can use language flexibly and effectively for all purposes.</td>
+            </tr>
+
+            <th>C2 English (Proficient)</th>
+            <td>
+                Level C2 corresponds to proficient users of English, who can understand
+                and express virtually everything with ease and differentiate finer shades of meaning.</td>
+
+
+        </table>
+
+
+    </div>
+</div>
+
+<!-- Importing Footer -->
+<div th:insert="footer.html :: footer"></div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

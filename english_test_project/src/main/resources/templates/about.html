@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/css/about.css}">
+  <title>About</title>
+</head>
+<body>
+
+<!-- Importing NavBar -->
+<div th:insert="navbar.html :: navbar"></div>
+
+<!-- Main Container Start -->
+<div class="main-container container py-5 px-4">
+
+  <div>
+    <h1 class="mb-5 text-center">Discover your current English level</h1>
+    <p>This online test will give you an approximate indication
+      of your English proficiency level. You can use the result to help
+      you find online courses or learning content that is
+      appropriate for your English language ability.</p>
+
+    <h1 class="mb-5 text-center">Test your English level online</h1>
+    <p>Find out your level of grammar with this easy English placement test.
+      Knowing your level will help you identify strengths and areas for improvement,
+      and reach your learning goals. If you want to learn more about English levels
+      <a  href="levels"><b>click here</b></a>
+     </p>
+  <br><br>
+
+    <h1 class="mb-5 text-center">Why take our online English language test?</h1>
+
+    <ul>
+
+
+    <h4>Choose the right English course</h4>
+    <li>
+      Before you decide to go on an English language course abroad, you need to know where
+      you’ll be starting from and what your strengths and weaknesses are. This will allow you
+      to pick an English course where you will focus on your specific needs.</li>
+
+    <h4>Set goals</h4>
+    <li>
+      Without taking an English language test, it’s hard to determine what goals are achievable
+      - once you know what your level is at the moment, you’ll have a clear idea of what skills
+      you need to improve in order to reach a higher level of English.</li>
+
+    <h4>Measure your progress</h4>
+    <li>
+      If you’ve been studying English for a while, our online tests will allow you to identify
+      your progress so far and how far you can go on a language stay abroad. Taking the test
+      again during and after your English course abroad, will also allow you to determine
+      how far you’ve come.</li>
+
+  </ul>
+
+
+  </div>
+</div>
+
+<!-- Importing Footer -->
+<div th:insert="footer.html :: footer"></div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/css/test.css}">
+	<title>Test</title>
+</head>
+<body>
+
+<!-- Importing NavBar -->
+<div th:insert="navbar.html :: navbar"></div>
+
+<div class="container py-5 px-4">
+	<h1 class="bg-warning text-light">Select The Correct Answer</h1>
+
+	<form action="submit" method="POST" th:object=${qForm}>
+		<div class="ques-box bg-primary text-light" th:each="question, i: ${qForm.questions}">
+			<p class="title" th:text="${question.title}"></p>
+
+			<div class="option">
+				<input type="radio" style="background-color: red;" th:name="|questions[${i.index}].selection|" th:value="1" />
+				<p th:text="${question.choiceA}"></p>
+			</div>
+
+			<div class="option">
+				<input type="radio" th:name="|questions[${i.index}].selection|" th:value="2" />
+				<p th:text="${question.choiceB}"></p>
+			</div>
+
+			<div class="option">
+				<input type="radio" th:name="|questions[${i.index}].selection|" th:value="3" />
+				<p th:text="${question.choiceC}"></p>
+			</div>
+
+			<input type="hidden" th:name="|questions[${i.index}].questionId|" th:value="${question.questionId}" />
+			<input type="hidden" th:name="|questions[${i.index}].title|" th:value="${question.title}" />
+			<input type="hidden" th:name="|questions[${i.index}].answer|" th:value="${question.answer}" />
+		</div>
+
+		<button type="submit" class="btn btn-warning d-block mx-auto mt-4"><b>Submit Answer</b></button>
+	</form>
+</div>
+
+<!-- Importing Footer -->
+<div th:insert="footer.html :: footer"></div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

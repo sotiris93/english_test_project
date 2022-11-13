@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/css/index.css}">
+	<title>Home Page</title>
+</head>
+<body>
+	
+	<!-- Importing NavBar -->
+	<div th:insert="navbar.html :: navbar"></div>
+
+	<!-- Main Container Start -->
+	<div class="main-container container py-5 px-4">
+
+		<div class="image-box">
+			<img th:src="@{/images/english_exam.png}" alt="image">
+
+			<div class="text-box2">
+				<h4><b>Test instructions</b></h4>
+				<ol>
+					<li><b>Answer all questions:</b> There are 25 single-select questions in total.</li>
+					<li><b>Be honest:</b> To get the most out of the test, make sure your answers
+						are real. No one is judging you!</li>
+
+					<li><b>Be conscious of time:</b> While you’re not limited in time, try not
+						to overthink each answer. This will help you get a more precise
+						result. </li>
+
+					<li><b>Read questions carefully:</b> Don’t rush when you read the questions
+						and make sure you understand them before answering.</li>
+					<li><b>Check your results:</b> After the test, you’ll get an approximate
+						evaluation of your current level.</li>
+				</ol>
+			</div>
+
+		</div>
+
+
+		<div class="text-box">
+			<h1 class="mb-5 text-center">Test Your English</h1>
+
+			<h2 class="mb-5 text-center">Discover your level of English with our quick, free online test</h2>
+
+
+			<form class="card bg-primary py-5 px-5" action="/test" method="POST">
+				<p style="color:black"><b>Enter Your Username</b></p>
+				<input type="text" name="username" />
+				<p class="text-danger warning" th:if="${warning}" th:text="${warning}"></p>
+				<button type="submit" class="btn btn-warning"><b>Begin test</b></button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Importing Footer -->
+	<div th:insert="footer.html :: footer"></div>
+	
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

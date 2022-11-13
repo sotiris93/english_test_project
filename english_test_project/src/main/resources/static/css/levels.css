@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #4FFFB0;
+}
+
+.main-container {
+    min-height: calc(100vh - 136px);
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "image-box"
+						"text-box";
+    row-gap: 50px;
+    column-gap: 50px;
+    color:blue;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid blue;
+}
+
+thead th:nth-child(1) {
+    width: 30%;
+}
+
+thead th:nth-child(2) {
+    width: 20%;
+}
+
+thead th:nth-child(3) {
+    width: 15%;
+}
+
+thead th:nth-child(4) {
+    width: 35%;
+}
+
+th,
+td {
+    padding: 20px;
+}
+
+
+
+
+footer {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+}
